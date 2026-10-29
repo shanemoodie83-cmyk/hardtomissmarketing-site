@@ -3,74 +3,409 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hard To Miss Marketing | Our new website is on its way</title>
-<meta name="description" content="Hard To Miss Marketing builds websites, Facebook posts and ads for Darwin trade and small local businesses, so the owner can stay on the tools. Our new website is on its way.">
+<title>Hard to Miss Marketing | Websites, Facebook and ads for Darwin small businesses</title>
+<meta name="description" content="Done-for-you marketing for Darwin small businesses. We look after your website, Facebook and advertising each month, so you can get on with the work. Ask for a free website mock-up.">
 <meta name="theme-color" content="#12263F">
 <link rel="canonical" href="https://hardtomissmarketing.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Hard To Miss Marketing">
+<meta property="og:site_name" content="Hard to Miss Marketing">
 <meta property="og:locale" content="en_AU">
-<meta property="og:title" content="Hard To Miss Marketing | Our new website is on its way">
-<meta property="og:description" content="You run the jobs. We run the marketing. Websites, Facebook posts and ads for Darwin trade and small local businesses.">
+<meta property="og:title" content="Hard to Miss Marketing | You run the jobs. We run the marketing.">
+<meta property="og:description" content="Websites, Facebook and advertising for Darwin small businesses, done for you. Ask for a free website mock-up.">
 <meta property="og:url" content="https://hardtomissmarketing.com/">
-<meta property="og:image" content="https://hardtomissmarketing.com/assets/og-image.png">
+<meta property="og:image" content="https://hardtomissmarketing.com/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Hard To Miss Marketing logo: an archery target with an arrow in the bullseye, and the line You run the jobs. We run the marketing.">
+<meta property="og:image:alt" content="Hard to Miss Marketing logo, an archery target with an arrow in the bullseye, and the line You run the jobs. We run the marketing.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hard To Miss Marketing | Our new website is on its way">
-<meta name="twitter:description" content="You run the jobs. We run the marketing.">
-<meta name="twitter:image" content="https://hardtomissmarketing.com/assets/og-image.png">
-<style>
-@font-face{font-family:'Montserrat';font-weight:700;font-display:swap;src:url('assets/fonts/Montserrat-Bold.woff2') format('woff2')}
-@font-face{font-family:'Montserrat';font-weight:800;font-display:swap;src:url('assets/fonts/Montserrat-ExtraBold.woff2') format('woff2')}
-@font-face{font-family:'Poppins';font-weight:400;font-display:swap;src:url('assets/fonts/Poppins-Regular.woff2') format('woff2')}
-@font-face{font-family:'Poppins';font-weight:500;font-display:swap;src:url('assets/fonts/Poppins-Medium.woff2') format('woff2')}
-@font-face{font-family:'Poppins';font-weight:600;font-display:swap;src:url('assets/fonts/Poppins-SemiBold.woff2') format('woff2')}
-:root{--navy:#12263F;--red:#D62839;--reddark:#B51F2F;--redlight:#FF6B78;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}
-html{background:var(--navy)}
-body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--navy);color:var(--white);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
-.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none}.rings{position:absolute;left:50%;top:50%;width:max(140vmin,900px);aspect-ratio:1;transform:translate(-50%,-50%);opacity:.07}
-.rings circle{fill:none;stroke:#fff;stroke-width:14}
-main{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(24px,5vh,56px) 24px 20px}
-.mark{width:clamp(80px,min(22vw,17vh),150px);height:auto;margin-bottom:clamp(20px,3.5vw,32px)}
-h1{font-family:'Montserrat',system-ui,Arial,sans-serif;font-weight:800;font-size:clamp(2rem,6.4vw,3.6rem);line-height:1.08;letter-spacing:-.01em}
-.soon{margin-top:clamp(14px,2.4vw,20px);display:inline-block;font-weight:600;font-size:clamp(.78rem,2.4vw,.95rem);letter-spacing:.14em;text-transform:uppercase;color:var(--white);background:var(--red);padding:.55em 1.2em;border-radius:999px}
-.tag{margin-top:clamp(20px,3.5vw,30px);font-family:'Montserrat',system-ui,Arial,sans-serif;font-weight:700;font-size:clamp(1.1rem,3.6vw,1.6rem);color:var(--redlight)}
-.about{margin:14px auto 0;max-width:34rem;font-size:clamp(1rem,2.8vw,1.15rem);line-height:1.6;color:#dbe3ee}
-.actions{margin-top:clamp(26px,4vw,38px);display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:100%;max-width:640px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:.8em 1.4em;border-radius:12px;font:600 1rem/1.2 'Poppins',system-ui,Arial,sans-serif;color:var(--white);text-decoration:none;border:2px solid rgba(255,255,255,.55);transition:background .15s,border-color .15s}
-.btn svg{width:22px;height:22px;flex:none}
-.btn:hover,.btn:focus-visible{background:rgba(255,255,255,.12);border-color:#fff}
-.btn.primary{background:var(--red);border-color:var(--red)}
-.btn.primary:hover,.btn.primary:focus-visible{background:var(--reddark);border-color:var(--reddark)}
-.btn:focus-visible{outline:3px solid var(--redlight);outline-offset:3px}
-.where{margin-top:22px;font-size:.95rem;color:#c3cedd;letter-spacing:.04em}
-footer{position:relative;padding:20px 24px 28px;text-align:center;font-size:.85rem;color:#b4c0d1;border-top:1px solid rgba(255,255,255,.12)}
-@media(max-width:560px){.actions{flex-direction:column;align-items:stretch;max-width:340px}.btn{min-width:0;padding:.8em 1em;font-size:.95rem;overflow-wrap:anywhere}}@media(max-width:360px){.btn{font-size:.85rem}}
-@media(prefers-reduced-motion:no-preference){main>*{animation:up .6s ease both}main>*:nth-child(2){animation-delay:.05s}main>*:nth-child(3){animation-delay:.1s}main>*:nth-child(4){animation-delay:.15s}main>*:nth-child(5){animation-delay:.2s}main>*:nth-child(6){animation-delay:.25s}@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}}
-</style>
+<meta name="twitter:title" content="Hard to Miss Marketing | You run the jobs. We run the marketing.">
+<meta name="twitter:description" content="Websites, Facebook and advertising for Darwin small businesses, done for you.">
+<meta name="twitter:image" content="https://hardtomissmarketing.com/assets/img/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://hardtomissmarketing.com/#business",
+  "name": "Hard to Miss Marketing",
+  "slogan": "You run the jobs. We run the marketing.",
+  "description": "Done-for-you marketing retainer for small businesses in Darwin: websites, Facebook and advertising.",
+  "url": "https://hardtomissmarketing.com/",
+  "logo": "https://hardtomissmarketing.com/favicon-192x192.png",
+  "image": "https://hardtomissmarketing.com/assets/img/og-image.png",
+  "telephone": "+61478582656",
+  "email": "shane@hardtomissmarketing.com",
+  "founder": {"@type": "Person", "name": "Shane Moodie"},
+  "taxID": "53 658 394 205",
+  "address": {"@type": "PostalAddress", "addressLocality": "Darwin", "addressRegion": "NT", "addressCountry": "AU"},
+  "areaServed": {"@type": "City", "name": "Darwin", "containedInPlace": {"@type": "State", "name": "Northern Territory"}},
+  "priceRange": "A$199 to A$299 per month",
+  "sameAs": ["https://www.facebook.com/profile.php?id=61595945549937"]
+}
+</script>
 </head>
 <body>
-<div class="bg"><svg class="rings" viewBox="0 0 900 900" aria-hidden="true" focusable="false"><circle cx="450" cy="450" r="440"/><circle cx="450" cy="450" r="320"/><circle cx="450" cy="450" r="200"/><circle cx="450" cy="450" r="80"/></svg></div>
-<main>
-  <img class="mark" src="assets/logo-mark.svg" alt="Hard To Miss Marketing logo, an archery target with an arrow in the bullseye" width="150" height="150">
-  <h1>Hard To Miss Marketing</h1>
-  <p class="soon">Our new website is on its way</p>
-  <p class="tag">You run the jobs. We run the marketing.</p>
-  <p class="about">We build websites, Facebook posts and ads for Darwin trade and small local businesses, all done for you, so the owner can stay on the tools.</p>
-  <nav class="actions" aria-label="Contact">
-    <a class="btn primary" href="tel:+61478582656"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v3.5a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call or text 0478 582 656</a>
-    <a class="btn" href="mailto:shane@hardtomissmarketing.com"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>shane@hardtomissmarketing.com</a>
-    <a class="btn" href="https://www.facebook.com/profile.php?id=61595945549937" rel="noopener"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg>Find us on Facebook</a>
-  </nav>
-  <p class="where">Darwin NT</p>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-website" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6" cy="6.5" r=".5"/><circle cx="8.5" cy="6.5" r=".5"/></symbol>
+  <symbol id="i-social" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+  <symbol id="i-ads" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10.5l5-3v9l-5-3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v3.5a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-3h5L16 7"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-work" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path style="fill:currentColor;stroke:none" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Hard to Miss Marketing, back to top"><img src="assets/img/logo-colour.svg" alt="Hard to Miss Marketing" width="180" height="46"></a>
+    <nav aria-label="Main"><ul class="nav">
+      <li><a href="#included">What you get</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a class="btn btn-red" href="#contact"><span class="long">Get a free mock-up</span><span class="short">Free mock-up</span></a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <svg class="rings" viewBox="0 0 900 900" aria-hidden="true" focusable="false"><circle cx="450" cy="450" r="410"/><circle cx="450" cy="450" r="280"/><circle cx="450" cy="450" r="150"/></svg>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Marketing for Darwin tradies and small businesses</p>
+      <h1>You run the jobs.<br> We run the <em>marketing.</em></h1>
+      <p class="lead">Your website, Facebook and advertising, done for you every month. So you can get on with the work and still be easy to find.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="#contact">Get your free mock-up</a>
+        <a class="btn btn-ghost" href="tel:+61478582656"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Shane 0478 582 656</a>
+      </div>
+      <ul class="ticks">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No lock-in contract</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Free mock-up first</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Darwin local</li>
+      </ul>
+    </div>
+    <figure class="demo" style="margin:0 auto">
+      <div aria-hidden="true">
+        <div class="browser">
+          <div class="bar"><i></i><i></i><i></i><span>yourbusiness.com.au</span></div>
+          <div class="site-hero">
+            <b>Your Business Name</b>
+            <small>Local, reliable, done right. Servicing Darwin and surrounds.</small>
+            <div class="fake-btns"><span>Call now</span><span>Get a quote</span></div>
+          </div>
+          <div class="site-body"><div>Our services</div><div>Recent jobs</div><div>Contact us</div></div>
+        </div>
+        <div class="phone"><div class="scr">
+          <div class="post-h"><i></i><span>Your Business<small>Sponsored</small></span></div>
+          <div class="post-img"><svg class="ico"><use href="#i-video"/></svg></div>
+          <div class="post-t"><b>Booking jobs this week</b>Tap to call or send us a message.</div>
+        </div></div>
+      </div>
+      <figcaption class="demo-cap">Example layout only. Your mock-up is made for your business.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec" id="problem">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The problem</p>
+      <h2>Before they call you, they check you.</h2>
+      <p>Most good local businesses win work by word of mouth. But even a referral will look you up before they ring. If what they find is missing, broken or gone quiet, the job can go to someone else.</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat">
+        <b>66%</b>
+        <p>of Aussie homeowners asked by hipages said they checked out a business's profile before choosing who to hire.</p>
+        <p class="src">Source: hipages homeowner survey, March 2025, via <a href="https://hipages.com.au/business/blog/work-winning-profile" rel="noopener">hipages</a>. Note: hipages is a marketplace for hiring tradespeople.</p>
+      </div>
+      <div class="stat light">
+        <b>81.5%</b>
+        <p>of Australian adults used Facebook at the start of 2025.</p>
+        <p class="src">Source: <a href="https://datareportal.com/reports/digital-2025-australia" rel="noopener">DataReportal, Digital 2025: Australia</a>, based on Meta's ad audience data.</p>
+      </div>
+    </div>
+    <div class="grid g3">
+      <article class="card pain">
+        <h3><svg class="ico" aria-hidden="true"><use href="#i-website"/></svg>No website, or a tired one</h3>
+        <p>A missing site, a broken link or a page that's hard to read on a phone makes people wonder if you're still trading.</p>
+      </article>
+      <article class="card pain">
+        <h3><svg class="ico" aria-hidden="true"><use href="#i-social"/></svg>A quiet Facebook page</h3>
+        <p>If the last post is from a year ago, customers can't tell you're busy and doing good work right now.</p>
+      </article>
+      <article class="card pain">
+        <h3><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>No time to do it</h3>
+        <p>After a full day of work, quotes and invoices, the last thing you want is to sit down and write posts.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="included">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What you get</p>
+      <h2>Website, Facebook and ads. All in one.</h2>
+      <p>One monthly price, one person to deal with, and nothing for you to learn.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card inc">
+        <div class="badge-ico"><svg class="ico" aria-hidden="true"><use href="#i-website"/></svg></div>
+        <h3>Your website</h3>
+        <p>A clean, fast site that works on a phone and makes it easy to call you.</p>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Live on a domain in your name</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Hosting looked after</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Small updates when you need them</li>
+        </ul>
+      </article>
+      <article class="card inc">
+        <div class="badge-ico"><svg class="ico" aria-hidden="true"><use href="#i-social"/></svg></div>
+        <h3>Your Facebook</h3>
+        <p>Your page kept active, so people can see you're busy and doing good work.</p>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>12 Facebook posts a month</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Written and posted for you</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Matches the look of your website</li>
+        </ul>
+      </article>
+      <article class="card inc">
+        <div class="badge-ico"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg></div>
+        <h3>Your advertising</h3>
+        <p>Short video ads that show what you do, ready to share or run wherever suits your business.</p>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>2 short ad clips a month</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Made for your business</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Ad plan and budget worked out with you</li>
+        </ul>
+      </article>
+    </div>
+    <p class="note">Every business is different, so we'll work out an ad plan and a budget that suits you. Any money spent running ads is paid to the platform they run on, such as Facebook or Google, and is separate from the monthly fee.</p>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps. No jargon.</h2>
+    </div>
+    <div class="grid g3 steps">
+      <article class="card step">
+        <div class="num" aria-hidden="true">1</div>
+        <h3>We make a free mock-up</h3>
+        <p>We put together a mock-up of a new website for your business, plus a short sample ad. It's free, and there's no obligation.</p>
+      </article>
+      <article class="card step">
+        <div class="num" aria-hidden="true">2</div>
+        <h3>You have your say</h3>
+        <p>Tell us what you like and what to change. When you're happy, we put the site live on a domain in your name.</p>
+      </article>
+      <article class="card step">
+        <div class="num" aria-hidden="true">3</div>
+        <h3>We run it every month</h3>
+        <p>We post to your Facebook, make your ad clips and keep your site up to date. You get on with the work.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Pricing</p>
+      <h2>Simple monthly pricing.</h2>
+      <p>The founding offer is only for our first 5 customers. Once those spots are taken, it's gone.</p>
+    </div>
+    <div class="grid prices">
+      <article class="card price-card founding">
+        <span class="flag">First 5 customers only</span>
+        <h3>Founding customer</h3>
+        <div class="amount">A$199 <small>/ month</small></div>
+        <p class="first">First month just A$99</p>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Website live on a domain in your name</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Hosting and small updates</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>12 Facebook posts a month</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>2 short ad clips a month</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Price locked for 12 months</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No lock-in contract, no notice period</li>
+        </ul>
+        <p class="save">That's A$1,300 less than the normal price over your first year (A$2,288 instead of A$3,588).</p>
+        <a class="btn btn-red" href="#contact">Start with a free mock-up</a>
+      </article>
+      <article class="card price-card">
+        <span class="flag grey">Normal price</span>
+        <h3>Standard</h3>
+        <div class="amount">A$299 <small>/ month</small></div>
+        <p>The same full package. This is the normal price from customer 6 onwards, and for founding customers after their first 12 months.</p>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Website live on a domain in your name</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Hosting and small updates</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>12 Facebook posts a month</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>2 short ad clips a month</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No lock-in contract, no notice period</li>
+        </ul>
+        <a class="btn btn-line" href="#contact">Ask a question</a>
+      </article>
+    </div>
+    <p class="note">Prices are in Australian dollars, paid a month in advance. The founding price is locked for 12 months of continuous service. If you stop, your current paid month runs to the end and there's nothing more to pay.</p>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div class="about-card">
+      <img src="assets/img/icon-circle.svg" alt="Hard to Miss Marketing logo mark, an archery target with an arrow in the bullseye" width="96" height="96">
+      <ul>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Based in Darwin NT</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>One person to deal with</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Websites, Facebook, ads</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>G'day, I'm Shane.</h2>
+      <p>I'm a Darwin local, and I started Hard to Miss Marketing to take the marketing off local small businesses' plates. You're flat out doing the work. I look after the website, the Facebook page and the ads, so people can find you and see you're the real deal.</p>
+      <p>It's a small local business, so when you call or message, you deal with me.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">FAQ</p>
+      <h2>Fair questions.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is there a lock-in contract?</summary>
+        <p>No. There's no lock-in contract and no notice period. You pay a month in advance, and if you decide to stop, we finish out the month you've already paid for and that's it. On the founding offer, your A$199 price is locked for 12 months as long as you stay with us.</p>
+      </details>
+      <details>
+        <summary>How does billing work?</summary>
+        <p>You pay a month in advance, in Australian dollars. If you stop, we finish out the month you've already paid for.</p>
+      </details>
+      <details>
+        <summary>Who owns the website?</summary>
+        <p>Your site goes live on a domain registered in your name, so your web address is yours. Your Facebook page stays yours too. We just need access to post on it for you.</p>
+      </details>
+      <details>
+        <summary>What do you need from me?</summary>
+        <p>Not much. Your business name, the work you do and the areas you cover, the phone number and email you want customers to use, any photos of your jobs, and access to your Facebook page. We sort out the rest.</p>
+      </details>
+      <details>
+        <summary>What does the free mock-up cost?</summary>
+        <p>Nothing. We make a mock-up of a new website for your business and a short sample ad. Have a look, and if it's not for you, no worries.</p>
+      </details>
+      <details>
+        <summary>How does the advertising work?</summary>
+        <p>Your monthly fee covers making your ad clips. Every business is different, so we'll talk it through and work out an ad budget that suits you. Money spent running ads is paid to the platform they run on, such as Facebook, Google or elsewhere, and is separate from the monthly fee.</p>
+      </details>
+      <details>
+        <summary>What happens after the first 12 months?</summary>
+        <p>Founding customers move to the normal price of A$299 a month after 12 months. There's still no lock-in.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Contact</p>
+      <h2>Ask for your free mock-up.</h2>
+      <p>Call, text or email Shane. Tell us your business name and what you do, and we'll put a mock-up together.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="big-btns">
+          <a class="btn btn-red" href="tel:+61478582656"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>Call 0478 582 656<small>Tap to call</small></span></a>
+          <a class="btn btn-ghost" href="sms:+61478582656"><svg class="ico" aria-hidden="true"><use href="#i-message"/></svg><span>Text 0478 582 656<small>Tap to send a text</small></span></a>
+          <a class="btn btn-ghost" href="mailto:shane@hardtomissmarketing.com?subject=Free%20mock-up%20request"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span>Email Shane<small>shane@hardtomissmarketing.com</small></span></a>
+          <a class="btn btn-ghost" href="https://www.facebook.com/profile.php?id=61595945549937" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg><span>Message us on Facebook<small>Hard to Miss Marketing</small></span></a>
+        </div>
+        <p class="where">Based in Darwin NT.</p>
+      </div>
+      <form class="mail" id="mockup-form" action="mailto:shane@hardtomissmarketing.com?subject=Free%20mock-up%20request" method="post" enctype="text/plain">
+        <h3>Or fill this in</h3>
+        <p class="hint">This opens your email app with your details filled in, ready to send. Nothing is stored on this website.</p>
+        <div class="fields">
+          <div><label for="f-name">Your name</label><input id="f-name" name="Name" autocomplete="name" required></div>
+          <div><label for="f-biz">Business name</label><input id="f-biz" name="Business" autocomplete="organization" required></div>
+          <div><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+          <div><label for="f-trade">What you do</label><input id="f-trade" name="Trade" placeholder="e.g. electrician, cafe, cleaning"></div>
+          <div class="full"><label for="f-msg">Anything else? (optional)</label><textarea id="f-msg" name="Message" rows="4" placeholder="Your current website or Facebook page, the areas you cover, anything you'd like in the mock-up."></textarea></div>
+        </div>
+        <button class="btn btn-red" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Open email to send</button>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
 </main>
-<footer>Hard To Miss Marketing, ABN 53 658 394 205</footer>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <img src="assets/img/htm-logo-horizontal-reversed.svg" alt="Hard to Miss Marketing" width="172" height="44">
+      <p>You run the jobs. We run the marketing.</p>
+      <p>Darwin NT</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="tel:+61478582656">0478 582 656</a></p>
+      <p><a href="mailto:shane@hardtomissmarketing.com">shane@hardtomissmarketing.com</a></p>
+      <p><a href="https://www.facebook.com/profile.php?id=61595945549937" rel="noopener">Facebook</a></p>
+    </div>
+    <div>
+      <h4>Business</h4>
+      <p>Hard to Miss Marketing</p>
+      <p>ABN 53 658 394 205</p>
+      <p><a href="privacy.html">Privacy</a>. This site uses no cookies or tracking.</p>
+      <p>&copy; 2026 Hard to Miss Marketing</p>
+    </div>
+    <p class="sources">Stats on this page: hipages, "7 must-haves for a hipages profile that wins more work" (hipages homeowner survey, March 2025), <a href="https://hipages.com.au/business/blog/work-winning-profile" rel="noopener">hipages.com.au</a>. DataReportal, "Digital 2025: Australia", 25 February 2025, <a href="https://datareportal.com/reports/digital-2025-australia" rel="noopener">datareportal.com</a>.</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="btn btn-red" href="tel:+61478582656"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Shane</a>
+  <a class="btn btn-ghost" href="#contact">Free mock-up</a>
+</nav>
+
+<script>
+(function(){
+  var f=document.getElementById('mockup-form');if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.reportValidity())return;
+    var v=function(id){return document.getElementById(id).value.trim()};
+    var biz=v('f-biz');
+    var body='Hi Shane,\n\nI would like a free website mock-up.\n\n'+
+      'Name: '+v('f-name')+'\nBusiness: '+biz+'\nPhone: '+v('f-phone')+'\nWhat we do: '+v('f-trade')+'\n\n'+v('f-msg')+'\n';
+    var href='mailto:shane@hardtomissmarketing.com?subject='+encodeURIComponent('Free mock-up request: '+biz)+'&body='+encodeURIComponent(body);
+    window.location.href=href;
+    document.getElementById('form-msg').textContent='Your email app should open now with everything filled in. Just press send. If nothing happens, email shane@hardtomissmarketing.com or call 0478 582 656.';
+  });
+})();
+</script>
 </body>
 </html>
