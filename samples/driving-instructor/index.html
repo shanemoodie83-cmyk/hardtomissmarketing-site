@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sample Driving School | Driving lessons with Sam (sample site)</title>
+<meta name="description" content="SAMPLE SITE. Driving lessons with a patient, accredited local instructor. Auto lessons, home and school pick-ups, test packages. Book online, no phone tag.">
+<meta name="robots" content="noindex,nofollow">
+<style>
+@font-face{font-family:Nunito;font-weight:400;font-display:swap;src:url(fonts/Nunito-400.woff2) format('woff2')}
+@font-face{font-family:Nunito;font-weight:700;font-display:swap;src:url(fonts/Nunito-700.woff2) format('woff2')}
+@font-face{font-family:Nunito;font-weight:900;font-display:swap;src:url(fonts/Nunito-900.woff2) format('woff2')}
+:root{--yl:#FFD21F;--yl2:#FFF4C2;--dk:#141414;--ink:#222;--mu:#5b5b5b;--rd:#E0262B;--bg:#FAFAF6;--ln:#e6e3d6;--gn:#1F8A4C}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:17px}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-weight:900;color:var(--dk);line-height:1.08;letter-spacing:-.02em;margin:0}
+h2{font-size:clamp(30px,4vw,46px)}
+.lab{display:inline-block;font-weight:900;font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:var(--dk);color:var(--yl);padding:5px 10px;border-radius:6px}
+.hl{background:linear-gradient(transparent 58%,var(--yl) 58%);padding:0 .08em}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:17px;text-decoration:none;padding:14px 22px;border-radius:12px;border:3px solid var(--dk);min-height:52px;cursor:pointer;font-family:inherit;transition:transform .12s,box-shadow .12s}
+.btn:active{transform:translate(2px,2px)}
+.btn.y{background:var(--yl);color:var(--dk);box-shadow:4px 4px 0 var(--dk)}
+.btn.k{background:var(--dk);color:#fff;box-shadow:4px 4px 0 var(--yl)}
+.btn.w{background:#fff;color:var(--dk);box-shadow:4px 4px 0 var(--dk)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+/* sample ribbon */
+.sample{background:var(--dk);color:#fff;font-size:13px;font-weight:700;text-align:center;padding:7px 12px}
+.sample b{color:var(--yl)}
+/* header */
+header{background:#fff;border-bottom:3px solid var(--dk);position:sticky;top:0;z-index:20}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:19px;color:var(--dk);line-height:1.05}
+.logo small{display:block;font-weight:700;font-size:12px;color:var(--mu);letter-spacing:.02em}
+.lp{flex:none;width:42px;height:42px;background:var(--yl);border:3px solid var(--dk);border-radius:6px;display:grid;place-items:center;font-weight:900;font-size:26px;color:var(--dk);line-height:1}
+nav{display:flex;align-items:center;gap:22px;font-weight:700;font-size:15px}
+nav a{text-decoration:none}
+nav a:not(.btn):hover{text-decoration:underline;text-decoration-color:var(--yl);text-decoration-thickness:3px}
+nav .btn{min-height:42px;padding:8px 16px;font-size:15px}
+@media(max-width:860px){nav a:not(.btn){display:none}}
+/* hero */
+.hero{background:var(--yl);border-bottom:4px solid var(--dk);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:64px}
+.hero .kick{font-weight:900;font-size:15px;color:var(--dk);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.hero .kick i{width:10px;height:10px;border-radius:50%;background:var(--gn);box-shadow:0 0 0 4px rgba(31,138,76,.2);display:inline-block}
+.hero h1{font-size:clamp(36px,5.2vw,62px)}
+.hero h1 .l1{display:block;margin-bottom:.38em}
+.hero h1 .l2{display:inline;line-height:1.22}
+.hero h1 .l2{background:var(--dk);color:var(--yl);padding:0 .14em;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p.sub{font-size:19px;font-weight:700;max-width:540px;margin:18px 0 26px;color:#2a2a2a}
+.hero .ticks{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;gap:10px 20px;font-weight:700;font-size:15px}
+.hero .ticks li::before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--dk);color:var(--yl);font-size:13px;margin-right:7px;font-weight:900}
+.art{background:#fff;border:4px solid var(--dk);border-radius:22px;box-shadow:8px 8px 0 var(--dk);overflow:hidden;position:relative}
+.art .tag{position:absolute;top:12px;left:12px;background:var(--dk);color:#fff;font-size:12px;font-weight:900;padding:4px 9px;border-radius:6px;letter-spacing:.04em}
+.next{position:absolute;right:14px;top:14px;background:#fff;border:3px solid var(--dk);border-radius:12px;padding:8px 12px;font-size:13px;font-weight:700;box-shadow:3px 3px 0 var(--dk)}
+.next b{display:block;font-size:16px;font-weight:900}
+/* quick answers */
+.qa{background:var(--yl2);padding:40px 0 52px;border-bottom:4px solid var(--dk)}
+.qa .head{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.qa h2{margin-top:12px}
+.qa .hint{font-weight:700;color:var(--mu);font-size:16px;max-width:420px;margin:0}
+.acc{display:grid;gap:12px}
+.acc details{background:#fff;border:3px solid var(--dk);border-radius:14px;box-shadow:4px 4px 0 var(--ln);overflow:hidden}
+.acc details[open]{box-shadow:4px 4px 0 var(--dk)}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:16px 20px;font-weight:900;font-size:18px;color:var(--dk)}
+.acc summary::-webkit-details-marker{display:none}
+.acc .n{flex:none;width:34px;height:34px;border-radius:6px;background:var(--yl);border:3px solid var(--dk);display:grid;place-items:center;font-weight:900;font-size:17px;line-height:1}
+.acc .q{flex:1}
+.acc .ch{flex:none;width:28px;height:28px;border-radius:8px;background:var(--dk);color:var(--yl);display:grid;place-items:center;font-weight:900;font-size:20px;line-height:1;transition:transform .15s}
+.acc details[open] .ch{transform:rotate(45deg);background:var(--rd);color:#fff}
+.acc .ans{padding:0 20px 20px 68px}
+.acc .ans p{margin:0 0 14px;font-size:17px}
+.acc .ans .btn{min-height:44px;padding:9px 16px;font-size:15px}
+.eg{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;background:var(--yl2);border:1.5px dashed #b89a00;color:#6b5800;padding:1px 6px;border-radius:5px;vertical-align:2px;margin-left:4px}
+/* sections */
+section.s{padding:64px 0;border-bottom:1px solid var(--ln)}
+.sh{max-width:640px;margin-bottom:30px}
+.sh p{color:var(--mu);font-weight:700;margin:12px 0 0;font-size:18px}
+.sh h2{margin-top:12px}
+/* problem strip */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:3px solid var(--dk);border-radius:16px;padding:22px}
+.card h3{font-size:20px;margin:12px 0 6px}
+.card p{margin:0;color:#3b3b3b}
+.ic{width:46px;height:46px;border-radius:10px;background:var(--yl);border:3px solid var(--dk);display:grid;place-items:center}
+/* areas */
+.areas{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:#fff;border:2px solid var(--dk);border-radius:999px;padding:8px 14px;font-weight:700;font-size:15px}
+.chips span.m{background:var(--dk);color:var(--yl)}
+.mapbox{background:#fff;border:3px solid var(--dk);border-radius:18px;overflow:hidden}
+.mapbox .cap{padding:12px 16px;font-size:14px;font-weight:700;color:var(--mu);border-top:2px solid var(--ln)}
+/* packages */
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.pkg{background:#fff;border:3px solid var(--dk);border-radius:18px;padding:24px;display:flex;flex-direction:column;position:relative}
+.pkg.pop{background:var(--dk);color:#fff;box-shadow:6px 6px 0 var(--yl)}
+.pkg.pop h3,.pkg.pop .pr{color:#fff}
+.pkg .badge{position:absolute;top:-14px;left:20px;background:var(--yl);color:var(--dk);border:3px solid var(--dk);font-weight:900;font-size:13px;padding:3px 10px;border-radius:999px}
+.pkg h3{font-size:22px}
+.pkg .pr{font-size:40px;font-weight:900;color:var(--dk);margin:10px 0 2px;letter-spacing:-.02em}
+.pkg .pr small{font-size:15px;font-weight:700;opacity:.7}
+.pkg ul{list-style:none;padding:0;margin:14px 0 22px;display:grid;gap:8px;font-size:16px}
+.pkg li::before{content:"✓ ";font-weight:900;color:var(--gn)}
+.pkg.pop li::before{color:var(--yl)}
+.pkg .btn{margin-top:auto}
+.note{font-size:14px;color:var(--mu);font-weight:700;margin-top:18px}
+/* booking */
+.book{background:var(--dk);color:#fff;border-bottom:4px solid var(--yl)}
+.book h2,.book h3{color:#fff}
+.book .sh p{color:#cfcfcf}
+.bk{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.week{background:#1f1f1f;border:2px solid #333;border-radius:16px;padding:18px}
+.week h3{font-size:18px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.grid7{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:13px;text-align:center}
+.grid7 .d{font-weight:900;color:#bbb;padding-bottom:2px}
+.slot{border-radius:8px;padding:9px 0;font-weight:900;border:2px solid #3a3a3a;color:#777;background:#262626}
+.slot.o{background:var(--yl);color:var(--dk);border-color:var(--yl);cursor:pointer}
+.slot.o.sel{background:#fff;border-color:#fff;outline:3px solid var(--gn)}
+.key{display:flex;gap:16px;font-size:13px;color:#bbb;margin-top:12px;font-weight:700}
+.key i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+form{background:#fff;color:var(--ink);border-radius:18px;padding:22px;border:3px solid var(--yl)}
+form h3{color:var(--dk)!important;font-size:22px;margin-bottom:4px}
+form .small{font-size:14px;color:var(--mu);margin:0 0 14px;font-weight:700}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-weight:900;font-size:14px;margin-bottom:12px;color:var(--dk)}
+input,select,textarea{display:block;width:100%;margin-top:5px;font:inherit;font-size:16px;padding:11px 12px;border:2px solid #cfcab5;border-radius:10px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--dk);box-shadow:0 0 0 3px var(--yl)}
+.seg{display:flex;gap:8px;margin-top:5px}
+.seg label{flex:1;margin:0}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:block;text-align:center;border:2px solid #cfcab5;border-radius:10px;padding:10px;font-weight:900;cursor:pointer}
+.seg input:checked+span{background:var(--yl);border-color:var(--dk)}
+form .btn{width:100%;margin-top:4px}
+.ok{display:none;background:#eaf7ef;border:2px solid var(--gn);border-radius:12px;padding:14px;font-weight:700;margin-top:12px}
+/* about */
+.ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.ph{background:var(--yl2);border:3px solid var(--dk);border-radius:20px;aspect-ratio:4/4.3;display:grid;place-items:center;position:relative;overflow:hidden}
+.ph .tag{position:absolute;bottom:12px;left:12px;background:var(--dk);color:#fff;font-size:12px;font-weight:900;padding:4px 9px;border-radius:6px}
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.trust div{background:#fff;border:2px solid var(--dk);border-radius:12px;padding:12px 14px;font-weight:700;font-size:15px;display:flex;gap:10px;align-items:flex-start}
+.trust b{display:block;font-weight:900;color:var(--dk)}
+.trust .ti{flex:none;width:28px;height:28px;border-radius:6px;background:var(--yl);border:2px solid var(--dk);display:grid;place-items:center;font-weight:900;font-size:14px}
+/* reviews */
+.rv3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:#fff;border:2px dashed #b9b39a;border-radius:16px;padding:20px;position:relative}
+.rev .st{color:#c9a400;font-size:18px;letter-spacing:2px}
+.rev p{margin:8px 0 10px;font-style:italic;color:#444}
+.rev small{font-weight:900;color:var(--mu)}
+.rev .eg{position:absolute;top:14px;right:14px}
+/* final cta */
+.fin{background:var(--yl);border-top:4px solid var(--dk);border-bottom:4px solid var(--dk);padding:52px 0;text-align:center}
+.fin p{font-weight:700;font-size:19px;margin:12px auto 24px;max-width:560px}
+.fin .cta{justify-content:center}
+footer{background:var(--dk);color:#cfcfcf;padding:36px 0 96px;font-size:15px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer h4{color:#fff;margin:0 0 8px;font-size:16px}
+footer a{color:#fff}
+footer .htm{grid-column:1/-1;border-top:1px solid #333;padding-top:18px;font-size:13px;color:#9a9a9a}
+footer .htm a{color:var(--yl)}
+/* sticky mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:3px solid var(--dk)}
+.bar .btn{flex:1;min-height:48px;padding:10px;font-size:16px;box-shadow:none}
+/* sample badge */
+.badge-htm{position:fixed;right:12px;bottom:12px;z-index:40;background:rgba(20,20,20,.88);color:#fff;font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;text-decoration:none;border:1px solid #444}
+.badge-htm b{color:var(--yl)}
+@media(max-width:900px){
+ .hero .wrap,.areas,.bk,.ab{grid-template-columns:1fr}
+ .why,.pk,.rv3{grid-template-columns:1fr}
+ .pk{gap:26px}
+ footer .wrap{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ body{font-size:16px}
+ .hero .wrap{padding-top:30px;padding-bottom:40px;gap:28px}
+ .hero p.sub{font-size:17px}
+ .hero .cta .btn{flex:1 1 100%}
+ section.s{padding:46px 0}
+ .acc summary{padding:14px;font-size:16px;gap:10px}
+ .acc .n{width:30px;height:30px;font-size:15px}
+ .acc .ans{padding:0 14px 16px 54px}
+ .acc .ans .cta .btn{flex:1}
+ .f2,.trust{grid-template-columns:1fr}
+ .bar{display:flex}
+ .badge-htm{bottom:84px}
+ .logo{font-size:17px}
+ nav .btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="sample"><b>SAMPLE WEBSITE</b> · Made-up business to show what your site could look like · All names, prices and numbers are examples</div>
+
+<header>
+ <div class="wrap">
+  <a class="logo" href="#top"><span class="lp">L</span><span>Sample Driving School<small>Lessons with Sam · Your area</small></span></a>
+  <nav>
+   <a href="#answers">Quick answers</a>
+   <a href="#areas">Areas</a>
+   <a href="#packages">Prices</a>
+   <a href="#about">About Sam</a>
+   <a class="btn y" href="#book">Book a lesson</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero" id="top">
+ <div class="wrap">
+  <div>
+   <div class="kick"><i></i>Taking new learners this month</div>
+   <h1><span class="l1">I'm in the car teaching, so I can't always pick up.</span> <span class="l2">Book your lesson here instead.</span></h1>
+   <p class="sub">See where I go, what it costs and when I'm free, then grab a time. No phone tag, no waiting for a call back, and no booking fees.</p>
+   <div class="cta">
+    <a class="btn k" href="#book">Book a lesson</a>
+    <a class="btn w" href="sms:0400000000?body=Hi%20Sam%2C%20I%27d%20like%20to%20book%20a%20driving%20lesson">Text me 0400 000 000</a>
+   </div>
+   <ul class="ticks">
+    <li>Accredited instructor</li>
+    <li>Dual-control auto car</li>
+    <li>Home, school or work pick-up</li>
+   </ul>
+  </div>
+  <div class="art" aria-hidden="true">
+   <span class="tag">ILLUSTRATION</span>
+   <svg viewBox="0 0 520 380" role="img">
+    <rect width="520" height="380" fill="#BFE3F5"/>
+    <circle cx="90" cy="110" r="30" fill="#FFD21F"/>
+    <path d="M0 210 Q130 150 260 190 T520 175 V380 H0Z" fill="#8FCB7A"/>
+    <path d="M150 380 L235 200 H285 L370 380Z" fill="#3a3a3a"/>
+    <path d="M258 205 h4 v22 h-4z M256 245 h8 v30 h-8z M254 300 h12 v44 h-12z" fill="#fff"/>
+    <g transform="translate(150 230)">
+     <rect x="18" y="38" width="190" height="66" rx="18" fill="#fff" stroke="#141414" stroke-width="5"/>
+     <path d="M48 40 L72 6 H158 L184 40Z" fill="#fff" stroke="#141414" stroke-width="5" stroke-linejoin="round"/>
+     <path d="M80 14 H113 V38 H66Z M121 14 H152 L170 38 H121Z" fill="#BFE3F5" stroke="#141414" stroke-width="4" stroke-linejoin="round"/>
+     <rect x="18" y="64" width="190" height="10" fill="#FFD21F"/>
+     <rect x="94" y="78" width="38" height="20" rx="3" fill="#FFD21F" stroke="#141414" stroke-width="3"/>
+     <text x="113" y="95" text-anchor="middle" font-family="Nunito,Arial" font-weight="900" font-size="18" fill="#141414">L</text>
+     <circle cx="62" cy="106" r="20" fill="#141414"/><circle cx="62" cy="106" r="8" fill="#ccc"/>
+     <circle cx="166" cy="106" r="20" fill="#141414"/><circle cx="166" cy="106" r="8" fill="#ccc"/>
+     <rect x="22" y="50" width="16" height="10" rx="3" fill="#FFF4C2" stroke="#141414" stroke-width="3"/>
+     <rect x="188" y="50" width="16" height="10" rx="3" fill="#E0262B" stroke="#141414" stroke-width="3"/>
+    </g>
+    
+   </svg>
+   <div class="next"><span>Next free lesson <span class="eg">Example</span></span><b>Thu 3:30 pm</b></div>
+  </div>
+ </div>
+</section>
+
+<section class="qa" id="answers" aria-label="Need a quick answer">
+ <div class="wrap">
+  <div class="head">
+   <div>
+    <span class="lab">Quick answers</span>
+    <h2>Need a <span class="hl">quick answer?</span></h2>
+   </div>
+   <p class="hint">Tap a question. Still unsure? Text me and I'll reply between lessons.</p>
+  </div>
+  <div class="acc">
+   <details open>
+    <summary><span class="n">1</span><span class="q">How much is a driving lesson?</span><span class="ch" aria-hidden="true">+</span></summary>
+    <div class="ans">
+     <p>A one-hour lesson is from $XX <span class="eg">Example price</span>. Packages bring the price per lesson down, and there's a cheaper first lesson so you can see if we click. Full prices are in the <a href="#packages">packages</a> below.</p>
+     <div class="cta"><a class="btn y" href="#book">Book a lesson</a><a class="btn w" href="sms:0400000000">Text me</a></div>
+    </div>
+   </details>
+   <details>
+    <summary><span class="n">2</span><span class="q">Do you teach auto or manual?</span><span class="ch" aria-hidden="true">+</span></summary>
+    <div class="ans">
+     <p>I teach in a dual-control automatic. Most learners go auto now because it's quicker to learn and easier to pass. If you specifically need a manual licence, text me and I'll point you to someone good.</p>
+     <div class="cta"><a class="btn y" href="#book">Book a lesson</a><a class="btn w" href="sms:0400000000">Text me</a></div>
+    </div>
+   </details>
+   <details>
+    <summary><span class="n">3</span><span class="q">Can you pick me up from home, school or work?</span><span class="ch" aria-hidden="true">+</span></summary>
+    <div class="ans">
+     <p>Yes. I'll pick you up and drop you back anywhere in my <a href="#areas">service areas</a>, including straight from school. Parents are welcome to sit in the back for a lesson if they want to see how it's going.</p>
+     <div class="cta"><a class="btn y" href="#book">Book a lesson</a><a class="btn w" href="sms:0400000000">Text me</a></div>
+    </div>
+   </details>
+   <details>
+    <summary><span class="n">4</span><span class="q">Can I use your car for my driving test?</span><span class="ch" aria-hidden="true">+</span></summary>
+    <div class="ans">
+     <p>Yes. With the test package I pick you up, give you a warm-up lesson on the local test routes, then you sit the test in the car you've been learning in. You book the test itself with the licensing office, and I'll help you find a time that works.</p>
+     <div class="cta"><a class="btn y" href="#book">Book a lesson</a><a class="btn w" href="sms:0400000000">Text me</a></div>
+    </div>
+   </details>
+   <details>
+    <summary><span class="n">5</span><span class="q">How many lessons will I need?</span><span class="ch" aria-hidden="true">+</span></summary>
+    <div class="ans">
+     <p>It depends on how much driving you do at home. Someone who practises with a parent most weeks might only need a handful of lessons to get test-ready. A complete beginner will need more. After your first lesson I'll give you an honest number, not an upsell.</p>
+     <div class="cta"><a class="btn y" href="#book">Book a lesson</a><a class="btn w" href="sms:0400000000">Text me</a></div>
+    </div>
+   </details>
+  </div>
+ </div>
+</section>
+
+<section class="s">
+ <div class="wrap">
+  <div class="sh">
+   <span class="lab">Why learners book with me</span>
+   <h2>Learning to drive is stressful enough. <span class="hl">Booking shouldn't be.</span></h2>
+  </div>
+  <div class="why">
+   <div class="card">
+    <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+    <h3>Book in two minutes</h3>
+    <p>Pick a time that suits you and send it through. I confirm by text, usually between lessons.</p>
+   </div>
+   <div class="card">
+    <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.5" stroke-linecap="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+    <h3>Calm, patient lessons</h3>
+    <p>Nervous drivers welcome. We start in quiet streets and build up when you're ready, not before.</p>
+   </div>
+   <div class="card">
+    <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.5" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+    <h3>Clear prices, no surprises</h3>
+    <p>Every price is on this page. Pay per lesson or save with a package. No booking fees.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="s" id="areas">
+ <div class="wrap areas">
+  <div>
+   <div class="sh">
+    <span class="lab">Where I teach</span>
+    <h2>Pick-ups across <span class="hl">your local area.</span></h2>
+    <p>Here's where I pick up and drop off. If your suburb isn't listed, text me. I can often fit you in.</p>
+   </div>
+   <div class="chips">
+    <span class="m">Main area: Example Town</span>
+    <span>Northside</span><span>Lakeside</span><span>Hillcrest</span><span>Riverbend</span><span>Westfield Park</span><span>Bayview</span><span>Oak Grove</span><span>Station Heights</span>
+   </div>
+   <p class="note">Suburb names are examples. Your real site lists your actual suburbs, which also helps Google show you to locals.</p>
+  </div>
+  <div class="mapbox" aria-hidden="true">
+   <svg viewBox="0 0 480 300">
+    <rect width="480" height="300" fill="#F3F1E7"/>
+    <path d="M-10 230 C80 200 140 250 230 220 S400 160 490 190" stroke="#BFE3F5" stroke-width="26" fill="none"/>
+    <path d="M40 0 L120 300 M0 120 H480 M300 0 L260 300 M0 60 L480 260" stroke="#fff" stroke-width="10"/>
+    <path d="M40 0 L120 300 M0 120 H480 M300 0 L260 300 M0 60 L480 260" stroke="#d8d4c2" stroke-width="2"/>
+    <circle cx="240" cy="140" r="105" fill="#FFD21F" fill-opacity=".28" stroke="#141414" stroke-width="3" stroke-dasharray="8 7"/>
+    <g font-family="Nunito,Arial" font-weight="900" font-size="13" fill="#141414">
+     <circle cx="240" cy="140" r="9" fill="#141414"/><text x="254" y="145">Example Town</text>
+     <circle cx="170" cy="80" r="5"/><text x="120" y="70">Northside</text>
+     <circle cx="320" cy="90" r="5"/><text x="300" y="78">Hillcrest</text>
+     <circle cx="300" cy="205" r="5"/><text x="310" y="210">Riverbend</text>
+     <circle cx="160" cy="195" r="5"/><text x="90" y="215">Lakeside</text>
+    </g>
+   </svg>
+   <div class="cap">Service area map (illustration). A real site can use a live Google map.</div>
+  </div>
+ </div>
+</section>
+
+<section class="s" id="packages" style="background:#fff">
+ <div class="wrap">
+  <div class="sh">
+   <span class="lab">Lessons &amp; packages</span>
+   <h2>Simple prices. <span class="hl">Book direct and save.</span></h2>
+   <p>All prices below are example placeholders for this sample site.</p>
+  </div>
+  <div class="pk">
+   <div class="pkg">
+    <h3>First lesson</h3>
+    <div class="pr">$XX <small>/ 1 hr</small></div>
+    <span class="eg" style="align-self:flex-start">Example price</span>
+    <ul><li>Home or school pick-up</li><li>Honest assessment of where you're at</li><li>Plan for how many lessons you'll need</li></ul>
+    <a class="btn w" href="#book" data-pkg="First lesson">Book first lesson</a>
+   </div>
+   <div class="pkg pop">
+    <span class="badge">Most popular</span>
+    <h3>5-lesson pack</h3>
+    <div class="pr">$XXX <small>save $XX</small></div>
+    <span class="eg" style="align-self:flex-start">Example price</span>
+    <ul><li>Five 1-hour lessons</li><li>Use them whenever suits you</li><li>Lock in a lower price per lesson</li></ul>
+    <a class="btn y" href="#book" data-pkg="5-lesson pack">Book the 5-pack</a>
+   </div>
+   <div class="pkg">
+    <h3>Test day package</h3>
+    <div class="pr">$XXX <small>/ test day</small></div>
+    <span class="eg" style="align-self:flex-start">Example price</span>
+    <ul><li>Pick-up and warm-up lesson</li><li>Practice on local test routes</li><li>Use my car for the test</li></ul>
+    <a class="btn w" href="#book" data-pkg="Test day package">Book test package</a>
+   </div>
+  </div>
+   </div>
+</section>
+
+<section class="s book" id="book">
+ <div class="wrap">
+  <div class="sh">
+   <span class="lab" style="background:var(--yl);color:var(--dk)">Book a lesson</span>
+   <h2>Pick a time. <span style="color:var(--yl)">I'll text you to confirm.</span></h2>
+   <p>Tap a yellow time, fill in your details and send. I confirm between lessons, usually within a few hours.</p>
+  </div>
+  <div class="bk">
+   <div class="week">
+    <h3>This week <span class="eg">Example times</span></h3>
+    <div class="grid7" id="slots">
+     <div class="d">Mon</div><div class="d">Tue</div><div class="d">Wed</div><div class="d">Thu</div><div class="d">Fri</div><div class="d">Sat</div><div class="d">Sun</div>
+     <div class="slot">7am</div><div class="slot o">7am</div><div class="slot">7am</div><div class="slot">7am</div><div class="slot o">7am</div><div class="slot o">8am</div><div class="slot">–</div>
+     <div class="slot">10am</div><div class="slot">10am</div><div class="slot o">10am</div><div class="slot">10am</div><div class="slot">10am</div><div class="slot o">10am</div><div class="slot">–</div>
+     <div class="slot">1pm</div><div class="slot o">1pm</div><div class="slot">1pm</div><div class="slot">1pm</div><div class="slot o">1pm</div><div class="slot">12pm</div><div class="slot">–</div>
+     <div class="slot o">3:30</div><div class="slot">3:30</div><div class="slot">3:30</div><div class="slot o">3:30</div><div class="slot">3:30</div><div class="slot">2pm</div><div class="slot">–</div>
+     <div class="slot">5pm</div><div class="slot">5pm</div><div class="slot o">5pm</div><div class="slot">5pm</div><div class="slot">5pm</div><div class="slot">–</div><div class="slot">–</div>
+    </div>
+    <div class="key"><span><i style="background:var(--yl)"></i>Free</span><span><i style="background:#262626;border:1px solid #444"></i>Booked</span></div>
+    <p style="font-size:14px;color:#bbb;margin:14px 0 0">Can't see a time that works? Send a request anyway and tell me what suits. Times can be kept up to date from the instructor's calendar.</p>
+   </div>
+   <form id="bf" novalidate>
+    <h3>Lesson request</h3>
+    <p class="small">Sample form only. Nothing is sent from this page.</p>
+    <div class="f2">
+     <label>Learner's name<input name="name" autocomplete="name" placeholder="First name"></label>
+     <label>Mobile<input name="phone" type="tel" autocomplete="tel" placeholder="04XX XXX XXX"></label>
+    </div>
+    <div class="f2">
+     <label>Pick-up suburb<input name="suburb" placeholder="e.g. Northside"></label>
+     <label>Lesson type
+      <select name="pkg" id="pkg"><option>First lesson</option><option>Single lesson</option><option>5-lesson pack</option><option>Test day package</option></select>
+     </label>
+    </div>
+    <label>Preferred time<input name="time" id="time" placeholder="Tap a yellow time or type one"></label>
+    <label>Driving experience
+     <div class="seg">
+      <label><input type="radio" name="exp" checked><span>None yet</span></label>
+      <label><input type="radio" name="exp"><span>Some</span></label>
+      <label><input type="radio" name="exp"><span>Test soon</span></label>
+     </div>
+    </label>
+    <label>Anything I should know? (optional)<textarea name="msg" rows="2" placeholder="e.g. a bit nervous, pick up from school"></textarea></label>
+    <button class="btn y" type="submit">Send lesson request</button>
+    <div class="ok" id="ok">Thanks! On a real site this request goes straight to Sam's phone and email, and he texts back to confirm. (Sample only, nothing was sent.)</div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section class="s" id="about">
+ <div class="wrap ab">
+  <div class="ph" aria-hidden="true">
+   <svg viewBox="0 0 200 210" width="70%">
+    <circle cx="100" cy="72" r="42" fill="#fff" stroke="#141414" stroke-width="5"/>
+    <path d="M28 205 C30 150 62 128 100 128 S170 150 172 205Z" fill="#141414"/>
+    <rect x="84" y="140" width="32" height="22" rx="3" fill="#FFD21F" stroke="#141414" stroke-width="3"/>
+    <text x="100" y="157" text-anchor="middle" font-family="Nunito,Arial" font-weight="900" font-size="16" fill="#141414">L</text>
+   </svg>
+   <span class="tag">Instructor photo goes here</span>
+  </div>
+  <div>
+   <span class="lab">About your instructor</span>
+   <h2 style="margin-top:12px">G'day, I'm Sam. <span class="hl">I'll get you test-ready.</span></h2>
+   <p style="font-size:18px;margin:14px 0 0">I'm a local, one-person driving school, so you'll have the same instructor every lesson. I keep things calm, explain things plainly, and tell parents honestly how their learner is going. My aim is a safe driver who passes first go, not someone who just scrapes through.</p>
+   <p style="font-size:14px;color:var(--mu);font-weight:700;margin:10px 0 0">Sam is a made-up instructor for this sample. A real site uses the instructor's own story and photo.</p>
+   <div class="trust">
+    <div><span class="ti">✓</span><span><b>Accredited instructor</b>Licensed driving instructor in my state (number shown here)</span></div>
+    <div><span class="ti">✓</span><span><b>Dual-control car</b>I can brake if needed, so you're safe from lesson one</span></div>
+    <div><span class="ti">✓</span><span><b>Working with Children Check</b>Current check held for teaching young learners</span></div>
+    <div><span class="ti">✓</span><span><b>Fully insured</b>Car and lessons covered for learner drivers</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="s" style="background:#fff">
+ <div class="wrap">
+  <div class="sh">
+   <span class="lab">Example reviews</span>
+   <h2>What learners say <span class="hl">(example layout)</span></h2>
+   <p>These are placeholders to show the layout. A real site shows the instructor's genuine Google reviews.</p>
+  </div>
+  <div class="rv3">
+   <div class="rev"><span class="eg">Example</span><div class="st">★★★★★</div><p>"Placeholder review: a short line from a learner about passing their test and feeling calm in the car."</p><small>Example learner name</small></div>
+   <div class="rev"><span class="eg">Example</span><div class="st">★★★★★</div><p>"Placeholder review: a parent mentioning school pick-ups and honest updates after each lesson."</p><small>Example parent name</small></div>
+   <div class="rev"><span class="eg">Example</span><div class="st">★★★★★</div><p>"Placeholder review: a nervous driver saying the lessons were patient and easy to book online."</p><small>Example learner name</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="fin">
+ <div class="wrap">
+  <h2>Ready when you are.</h2>
+  <p>Book online any time, or text me. I'll get back to you between lessons.</p>
+  <div class="cta"><a class="btn k" href="#book">Book a lesson</a><a class="btn w" href="sms:0400000000">Text 0400 000 000</a></div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div>
+   <h4>Sample Driving School</h4>
+   Driving lessons with Sam · Example Town and nearby suburbs<br>
+   Text or call: <a href="tel:0400000000">0400 000 000</a><br>
+   Lessons 7 am to 6 pm, Monday to Saturday <span class="eg" style="background:#333;color:#ddd;border-color:#666">Example</span>
+  </div>
+  <div>
+   <h4>On this page</h4>
+   <a href="#answers">Quick answers</a><br><a href="#areas">Service areas</a><br><a href="#packages">Prices</a><br><a href="#book">Book a lesson</a>
+  </div>
+  <div>
+   <h4>Instructor details</h4>
+   Licence / accreditation no. XXXXX<br>ABN XX XXX XXX XXX<br>(placeholders)
+  </div>
+  <div class="htm">This is a sample website. The business, instructor, prices, times and reviews are made up. Sample site by <a href="https://hardtomissmarketing.com/" target="_blank" rel="noopener">Hard To Miss Marketing</a>.</div>
+ </div>
+</footer>
+
+<div class="bar"><a class="btn k" href="#book">Book a lesson</a><a class="btn y" href="sms:0400000000">Text me</a></div>
+<a class="badge-htm" href="https://hardtomissmarketing.com/" target="_blank" rel="noopener">Sample site by <b>Hard To Miss Marketing</b></a>
+
+<script>
+document.querySelectorAll('.acc details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)document.querySelectorAll('.acc details').forEach(o=>{if(o!==d)o.open=false})}));
+const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+document.querySelectorAll('#slots .slot').forEach((s,i)=>{if(!s.classList.contains('o'))return;s.setAttribute('role','button');s.tabIndex=0;
+ const pick=()=>{document.querySelectorAll('#slots .slot.sel').forEach(x=>x.classList.remove('sel'));s.classList.add('sel');document.getElementById('time').value=days[i%7]+' '+s.textContent};
+ s.addEventListener('click',pick);s.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick()}})});
+document.querySelectorAll('[data-pkg]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('pkg').value=a.dataset.pkg}));
+document.getElementById('bf').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block'});
+</script>
+</body>
+</html>
